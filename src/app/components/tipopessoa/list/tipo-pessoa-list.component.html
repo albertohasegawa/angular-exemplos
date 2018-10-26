@@ -1,0 +1,31 @@
+<table class="table table-bordered table-hover table-condensed">
+  <thead><tr><th title="Field #1">Nome</th>
+  <th title="Field #2">Cpf</th>
+  <th title="Field #3">Email</th>
+  <th title="Field #5">Cep</th>
+  <th title="Field #6">Logradouro</th>
+  <th title="Field #7">Número</th>
+  <th title="Field #8">Complemento</th>
+  <th title="Field #9">Bairro</th>
+  <th title="Field #10">Cidade</th>
+  <th title="Field #11">Uf</th>
+  <th title="Field #12">Ações</th>
+  
+  </tr></thead>
+  <tbody><tr *ngFor="let p of pessoas">
+  <td>{{p.nome}}</td>
+  <td >{{p.cpf}}</td>
+  <td>{{p.email}}</td>
+  <td >{{p.endereco.cep}}</td>
+  <td>{{p.endereco.logradouro}}</td>
+  <td >{{p.endereco.numero}}</td>
+  <td>{{p.endereco.complemento}}</td>
+  <td>{{p.endereco.bairro}}</td>
+  <td>{{p.endereco.cidade}}</td>
+  <td>{{p.endereco.uf}}</td>
+  <td>
+      <button (click)="editar()">Editar</button>
+      <button (click)="excluir()">Excluir</button>
+  </td>
+  </tr>
+  </tbody></table>
