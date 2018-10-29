@@ -1,4 +1,4 @@
-import { Pessoa } from './models/pessoa';
+import { Pessoa } from '../models/pessoa';
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';

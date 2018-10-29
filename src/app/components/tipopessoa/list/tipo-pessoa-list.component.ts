@@ -1,6 +1,6 @@
-import { TipoPessoaService } from './../tipo-pessoa.service';
+import { TipoPessoaService } from './../../service/tipo-pessoa.service';
 import { Component, OnInit } from '@angular/core';
-import { Pessoa } from '../models/pessoa';
+import { Pessoa } from '../../models/pessoa';
 
 @Component({
   selector: 'app-tipo-pessoa-list',

@@ -1,0 +1,30 @@
+
+<div>
+    <table class="table" > 
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Data de Publicação</th>
+          <th>Autor</th>
+          <th>Categoria</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let livro of livros">
+          <td>{{livro.titulo}}</td>
+          <td>{{livro.dataPublicacao}}</td>
+          <td>{{livro.autor.nome}}</td>
+          <td>{{livro.categoria.descricao}}</td>
+  
+        </tr>
+  
+      </tbody>
+  
+  
+    </table>
+  
+  
+  </div>
+  
+  
+  

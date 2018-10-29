@@ -1,6 +1,8 @@
-import { Pessoa } from './../models/pessoa';
+import { TipoPessoaService } from './../../service/tipo-pessoa.service';
+import { Pessoa } from '../../models/pessoa';
+
 import { Component, OnInit } from '@angular/core';
-import { TipoPessoaService } from '../tipo-pessoa.service';
+
 
 @Component({
   selector: 'app-tipo-pessoa-form',

@@ -1,0 +1,12 @@
+<h1>Cadastro de Livro</h1>
+    Título: <input  [(ngModel)]="livro.titulo"><br>
+    Autor:<select [(ngModel)]="livro.autor.id">
+      <option *ngFor="let aut of autores" value="{{aut.id}}">{{aut.nome}}</option>
+    </select><br>
+    Categoria:<select [(ngModel)]="livro.categoria.id">
+        <option *ngFor="let cat of categorias" value="{{cat.id}}">{{cat.descricao}}</option>
+     </select><br>
+
+<button (click)="salvarLivro()" routerLink="/livro">Inserir</button>
+    
+  

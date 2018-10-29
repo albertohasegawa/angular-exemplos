@@ -3,19 +3,10 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: '' },
-  { 
-    path: 'tipo-pessoa', 
-    loadChildren: '../app/components/tipopessoa/tipo-pessoa.module#TipoPessoaModule'
-  }, 
-  {
-    path: 'input', 
-    loadChildren: '../app/components/input/input-decorator.module#InputDecoratorModule'
-  }, 
-  {
-    path: 'reactive', 
-    loadChildren: '../app/components/reactiveforms/reactive-forms.module#ReactiveFormsModule'
-  }
+  {path: '', pathMatch: 'full', redirectTo: ''},
+  {path: 'pessoa',loadChildren: './components/tipopessoa/tipo-pessoa.module#TipoPessoaModule'},
+  {path: 'livro', loadChildren: './components/livro/livro.module#LivroModule'} 
+
 ];
 
 @NgModule({

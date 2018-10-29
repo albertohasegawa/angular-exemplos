@@ -1,0 +1,31 @@
+<h1>Lista de Autores</h1>
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Pseudônimo</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let autor of autores">
+            <td>{{autor.nome}}</td>
+            <td>{{autor.pseudonimo}}</td>
+
+
+          <td><button (click)="deletarAutor(autor.id)" routerLink="livro/autor">Deletar</button></td>
+
+  
+        </tr>
+  
+      </tbody>
+  
+  
+    </table>
+  
+  
+  </div>
+  
+  
+  

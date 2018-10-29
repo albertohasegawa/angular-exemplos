@@ -1,0 +1,27 @@
+
+<div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Categoria</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let categoria of categorias">
+          <td>{{categoria.descricao}}</td>
+          <td><button (click)="deletarCategoria(categoria.id)">Deletar</button></td>
+
+  
+        </tr>
+  
+      </tbody>
+  
+  
+    </table>
+  
+  
+  </div>
+  
+  
+  

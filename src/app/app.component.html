@@ -1,16 +1,29 @@
 <h1>App Component</h1>
 
 <div>
-  <a [routerLink]="[ '/tipo-pessoa/create' ]">[Form] Tipo pessoa</a>
+  <a [routerLink]="[ '/pessoa/create' ]">Inserir Pessoa</a>
 </div>
 <div>
-  <a [routerLink]="[ '/tipo-pessoa' ]">[List] Tipo pessoa</a>
+  <a [routerLink]="[ '/pessoa' ]">Listar Pessoas</a>
 </div>
 <div>
-  <a [routerLink]="[ '/input' ]">[Input] Decorator</a>
+  <a [routerLink]="[ '/livro' ]">Listar Livros</a>
 </div>
 <div>
-    <a [routerLink]="[ '/reactive' ]">[Forms] Reactive forms</a>
+  <a [routerLink]="[ '/livro/create' ]">Inserir Livro</a>
 </div>
+<div>
+    <a [routerLink]="[ 'livro/categoria' ]">Listar Categorias</a>
+  </div>
+<div>
+  <a [routerLink]="[ 'livro/categoria/create' ]">Inserir Categoria</a>
+</div>
+<div>
+  <a [routerLink]="[ 'livro/autor' ]">Listar Autores</a>
+</div>
+<div>
+  <a [routerLink]="[ 'livro/autor/create' ]">Inserir Autor</a>
+</div>
+
 
 <router-outlet></router-outlet>
