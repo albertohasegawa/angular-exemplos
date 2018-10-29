@@ -40,8 +40,8 @@ export class LivroCreateComponent implements OnInit {
 
   salvarLivro() {
     this.livro.dataPublicacao = new Date();
-
     this.ls.postLivro(this.livro).subscribe();
+    
   }
 
   alterarLivro() {
