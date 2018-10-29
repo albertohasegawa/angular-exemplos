@@ -13,23 +13,40 @@ import { Livro } from '../../models/livro';
 })
 export class LivroCreateComponent implements OnInit {
 
-  livro: Livro = new Livro();
+  livro: Livro;
   autores: Array<Autor>;
   categorias: Array<Categoria>;
+
+  alterarMode: boolean;
 
 
   constructor(private as: AutorService, private cs: CategoriaService, private ls: LivroService) { }
 
   ngOnInit() {
+    if(this.ls.getLivro() != null) {
+      this.alterarMode = true;
+      this.livro = this.ls.getLivro();
+    }
+    else {
+      this.alterarMode = false;
+      this.livro = new Livro();
+    }
+
     this.as.getAutores().subscribe(req => this.autores = req);
     this.cs.getCategorias().subscribe(req => this.categorias = req);
+
+
   }
 
   salvarLivro() {
     this.livro.dataPublicacao = new Date();
 
     this.ls.postLivro(this.livro).subscribe();
+  }
 
+  alterarLivro() {
+    this.livro.dataPublicacao = new Date();
+    this.ls.putLivro(this.livro).subscribe();
   }
 
 }

@@ -7,6 +7,7 @@
           <th>Data de Publicação</th>
           <th>Autor</th>
           <th>Categoria</th>
+          <th>Ações</th>
         </tr>
       </thead>
       <tbody>
@@ -15,6 +16,8 @@
           <td>{{livro.dataPublicacao}}</td>
           <td>{{livro.autor.nome}}</td>
           <td>{{livro.categoria.descricao}}</td>
+          <td><button (click)="removerLivro(livro.id)">Excluir</button>
+            <button (click)="alterarLivro(livro)" routerLink="/livro/create">Alterar</button> </td>
   
         </tr>
   

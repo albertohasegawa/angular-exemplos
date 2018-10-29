@@ -21,7 +21,7 @@ export class LivroListComponent implements OnInit {
     this.ls.getLivros().subscribe(req => this.livros = req);
   }
 
-  deletar(id: number) {
+  removerLivro(id: number) {
     this.ls.deleteLivro(id).subscribe(req => this.buscarLivros());
   }
 
